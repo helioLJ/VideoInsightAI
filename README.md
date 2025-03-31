@@ -1,7 +1,7 @@
 # YouTube Transcript Analyzer
 
 <div align="center">
-  <img src="frontend/public/vite.svg" alt="YouTube Transcript Analyzer Logo" width="150" />
+  <img src="frontend/public/logo.svg" alt="YouTube Transcript Analyzer Logo" width="150" />
 </div>
 
 A modern web application that analyzes YouTube playlist content using AI. Extract transcripts, generate summaries, and get AI-powered insights to quickly determine if videos are worth watching.
