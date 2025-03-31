@@ -1,0 +1,282 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #cc0000;
+  font-size: 2.5rem;
+}
+
+.input-section {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #990000;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.status-section {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.videos-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-card h3 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid #eee;
+}
+
+.video-info {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.video-info p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.verdict {
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.worth-watching {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.summary-sufficient {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.video-link, .details-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.video-link {
+  background-color: #cc0000;
+}
+
+.details-link {
+  background-color: #424242;
+}
+
+.video-link:hover {
+  background-color: #990000;
+}
+
+.details-link:hover {
+  background-color: #212121;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+  
+  .status-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  
+  header h1 {
+    color: #ff4444; /* Brighter red for dark mode */
+  }
+  
+  button:disabled {
+    background-color: #555;
+    color: #aaa;
+  }
+  
+  .status-section {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .status-details p,
+  .status-details strong {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .error-message {
+    background-color: rgba(198, 40, 40, 0.2);
+    color: #f44336;
+  }
+  
+  .videos-section h2 {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .video-card {
+    background-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .video-card h3 {
+    color: rgba(255, 255, 255, 0.87);
+    border-bottom-color: #444;
+  }
+  
+  .video-info p {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  /* More visible verdict in dark mode */
+  .worth-watching {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #4caf50;
+  }
+  
+  .summary-sufficient {
+    background-color: rgba(245, 127, 23, 0.2);
+    color: #ffc107;
+  }
+}
